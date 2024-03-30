@@ -1,0 +1,265 @@
+
+    
+    type SysApplication {
+      id:ID
+      createdAt:Date
+      updatedAt:Date
+      name:String
+      title:String
+      intro:String
+      explain:String
+      author:String
+      version:String
+      sys:Boolean
+      
+      
+    }
+    
+    
+    input WhereSysApplication_id {
+        op_eq: ID
+  op_ne: ID
+  op_or: [ID]
+  op_gt: ID
+  op_gte: ID
+  op_lt: ID
+  op_lte: ID
+  op_between: [ID]
+  op_notBetween: [ID]
+  op_in: [ID]
+  op_notIn: [ID]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_createdAt {
+        op_eq: Date
+  op_ne: Date
+  op_or: [Date]
+  op_gt: Date
+  op_gte: Date
+  op_lt: Date
+  op_lte: Date
+  op_between: [Date]
+  op_notBetween: [Date]
+  op_in: [Date]
+  op_notIn: [Date]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_updatedAt {
+        op_eq: Date
+  op_ne: Date
+  op_or: [Date]
+  op_gt: Date
+  op_gte: Date
+  op_lt: Date
+  op_lte: Date
+  op_between: [Date]
+  op_notBetween: [Date]
+  op_in: [Date]
+  op_notIn: [Date]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_name {
+        op_eq: String
+  op_ne: String
+  op_or: [String]
+  op_gt: String
+  op_gte: String
+  op_lt: String
+  op_lte: String
+  op_between: [String]
+  op_notBetween: [String]
+  op_in: [String]
+  op_notIn: [String]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_title {
+        op_eq: String
+  op_ne: String
+  op_or: [String]
+  op_gt: String
+  op_gte: String
+  op_lt: String
+  op_lte: String
+  op_between: [String]
+  op_notBetween: [String]
+  op_in: [String]
+  op_notIn: [String]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_intro {
+        op_eq: String
+  op_ne: String
+  op_or: [String]
+  op_gt: String
+  op_gte: String
+  op_lt: String
+  op_lte: String
+  op_between: [String]
+  op_notBetween: [String]
+  op_in: [String]
+  op_notIn: [String]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_explain {
+        op_eq: String
+  op_ne: String
+  op_or: [String]
+  op_gt: String
+  op_gte: String
+  op_lt: String
+  op_lte: String
+  op_between: [String]
+  op_notBetween: [String]
+  op_in: [String]
+  op_notIn: [String]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_author {
+        op_eq: String
+  op_ne: String
+  op_or: [String]
+  op_gt: String
+  op_gte: String
+  op_lt: String
+  op_lte: String
+  op_between: [String]
+  op_notBetween: [String]
+  op_in: [String]
+  op_notIn: [String]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_version {
+        op_eq: String
+  op_ne: String
+  op_or: [String]
+  op_gt: String
+  op_gte: String
+  op_lt: String
+  op_lte: String
+  op_between: [String]
+  op_notBetween: [String]
+  op_in: [String]
+  op_notIn: [String]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      input WhereSysApplication_sys {
+        op_eq: Boolean
+  op_ne: Boolean
+  op_or: [Boolean]
+  op_gt: Boolean
+  op_gte: Boolean
+  op_lt: Boolean
+  op_lte: Boolean
+  op_between: [Boolean]
+  op_notBetween: [Boolean]
+  op_in: [Boolean]
+  op_notIn: [Boolean]
+  op_like: String
+  op_notLike: String
+  op_startsWith: String
+  op_endsWith: String
+  op_substring: String
+      }
+      
+    input WhereFieldSysApplication{
+    id:WhereSysApplication_id
+      createdAt:WhereSysApplication_createdAt
+      updatedAt:WhereSysApplication_updatedAt
+      name:WhereSysApplication_name
+      title:WhereSysApplication_title
+      intro:WhereSysApplication_intro
+      explain:WhereSysApplication_explain
+      author:WhereSysApplication_author
+      version:WhereSysApplication_version
+      sys:WhereSysApplication_sys
+      
+    }
+
+    input WhereSysApplication {
+      id:WhereSysApplication_id
+      createdAt:WhereSysApplication_createdAt
+      updatedAt:WhereSysApplication_updatedAt
+      name:WhereSysApplication_name
+      title:WhereSysApplication_title
+      intro:WhereSysApplication_intro
+      explain:WhereSysApplication_explain
+      author:WhereSysApplication_author
+      version:WhereSysApplication_version
+      sys:WhereSysApplication_sys
+      
+      op_and: [WhereFieldSysApplication]
+      op_or: [WhereFieldSysApplication]
+      op_not: [WhereFieldSysApplication]
+    }
+    
+    
+    input AddSysApplication {
+    name: String!
+      title: String!
+      intro: String
+      explain: String
+      author: String
+      version: String
+      sys: Boolean
+      
+    }
+    
+    
+    input EditSysApplication {
+    name: String
+      title: String
+      intro: String
+      explain: String
+      author: String
+      version: String
+      sys: Boolean
+      
+    }
+    
+    type CountSysApplication {
+      count: Int
+      rows: [SysApplication]
+    }
+    type ResDelSysApplication {
+      count: Int
+    }
+    type ResEditSysApplication {
+      ids: [Int]
+    }
+    

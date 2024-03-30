@@ -1,0 +1,172 @@
+
+type Mutation {
+
+  #模型管理 添加
+  SysModels_create(data:AddSysModels):SysModels
+  #模型管理 删除
+  SysModels_destroy(where:WhereSysModels!):ResDelSysModels
+  #模型管理 更新
+  SysModels_update(data:EditSysModels!,where:WhereSysModels!):ResEditSysModels
+
+  #系统用户 添加
+  SysUser_create(data:AddSysUser):SysUser
+  #系统用户 删除
+  SysUser_destroy(where:WhereSysUser!):ResDelSysUser
+  #系统用户 更新
+  SysUser_update(data:EditSysUser!,where:WhereSysUser!):ResEditSysUser
+
+  #模型字段表 添加
+  SysModelsFields_create(data:AddSysModelsFields):SysModelsFields
+  #模型字段表 删除
+  SysModelsFields_destroy(where:WhereSysModelsFields!):ResDelSysModelsFields
+  #模型字段表 更新
+  SysModelsFields_update(data:EditSysModelsFields!,where:WhereSysModelsFields!):ResEditSysModelsFields
+
+  #模型索引 添加
+  SysModelsIndexes_create(data:AddSysModelsIndexes):SysModelsIndexes
+  #模型索引 删除
+  SysModelsIndexes_destroy(where:WhereSysModelsIndexes!):ResDelSysModelsIndexes
+  #模型索引 更新
+  SysModelsIndexes_update(data:EditSysModelsIndexes!,where:WhereSysModelsIndexes!):ResEditSysModelsIndexes
+
+  #模型关联 添加
+  SysModelsAssociate_create(data:AddSysModelsAssociate):SysModelsAssociate
+  #模型关联 删除
+  SysModelsAssociate_destroy(where:WhereSysModelsAssociate!):ResDelSysModelsAssociate
+  #模型关联 更新
+  SysModelsAssociate_update(data:EditSysModelsAssociate!,where:WhereSysModelsAssociate!):ResEditSysModelsAssociate
+
+  #路由管理 添加
+  SysRoutes_create(data:AddSysRoutes):SysRoutes
+  #路由管理 删除
+  SysRoutes_destroy(where:WhereSysRoutes!):ResDelSysRoutes
+  #路由管理 更新
+  SysRoutes_update(data:EditSysRoutes!,where:WhereSysRoutes!):ResEditSysRoutes
+
+  #路由分类 添加
+  SysRoutesClassify_create(data:AddSysRoutesClassify):SysRoutesClassify
+  #路由分类 删除
+  SysRoutesClassify_destroy(where:WhereSysRoutesClassify!):ResDelSysRoutesClassify
+  #路由分类 更新
+  SysRoutesClassify_update(data:EditSysRoutesClassify!,where:WhereSysRoutesClassify!):ResEditSysRoutesClassify
+
+  #系统用户组 添加
+  SysUserGroup_create(data:AddSysUserGroup):SysUserGroup
+  #系统用户组 删除
+  SysUserGroup_destroy(where:WhereSysUserGroup!):ResDelSysUserGroup
+  #系统用户组 更新
+  SysUserGroup_update(data:EditSysUserGroup!,where:WhereSysUserGroup!):ResEditSysUserGroup
+
+  #角色表 添加
+  SysRole_create(data:AddSysRole):SysRole
+  #角色表 删除
+  SysRole_destroy(where:WhereSysRole!):ResDelSysRole
+  #角色表 更新
+  SysRole_update(data:EditSysRole!,where:WhereSysRole!):ResEditSysRole
+
+  #用户角色中间表 添加
+  SysUserRole_create(data:AddSysUserRole):SysUserRole
+  #用户角色中间表 删除
+  SysUserRole_destroy(where:WhereSysUserRole!):ResDelSysUserRole
+  #用户角色中间表 更新
+  SysUserRole_update(data:EditSysUserRole!,where:WhereSysUserRole!):ResEditSysUserRole
+
+  #开放接口 添加
+  SysOpenApi_create(data:AddSysOpenApi):SysOpenApi
+  #开放接口 删除
+  SysOpenApi_destroy(where:WhereSysOpenApi!):ResDelSysOpenApi
+  #开放接口 更新
+  SysOpenApi_update(data:EditSysOpenApi!,where:WhereSysOpenApi!):ResEditSysOpenApi
+
+  #cms内容主表 添加
+  CmsDoc_create(data:AddCmsDoc):CmsDoc
+  #cms内容主表 删除
+  CmsDoc_destroy(where:WhereCmsDoc!):ResDelCmsDoc
+  #cms内容主表 更新
+  CmsDoc_update(data:EditCmsDoc!,where:WhereCmsDoc!):ResEditCmsDoc
+
+  #cms分类 添加
+  CmsClassify_create(data:AddCmsClassify):CmsClassify
+  #cms分类 删除
+  CmsClassify_destroy(where:WhereCmsClassify!):ResDelCmsClassify
+  #cms分类 更新
+  CmsClassify_update(data:EditCmsClassify!,where:WhereCmsClassify!):ResEditCmsClassify
+
+  #文章 添加
+  CmsDocArticle_create(data:AddCmsDocArticle):CmsDocArticle
+  #文章 删除
+  CmsDocArticle_destroy(where:WhereCmsDocArticle!):ResDelCmsDocArticle
+  #文章 更新
+  CmsDocArticle_update(data:EditCmsDocArticle!,where:WhereCmsDocArticle!):ResEditCmsDocArticle
+
+  #图片 添加
+  CmsDocPicture_create(data:AddCmsDocPicture):CmsDocPicture
+  #图片 删除
+  CmsDocPicture_destroy(where:WhereCmsDocPicture!):ResDelCmsDocPicture
+  #图片 更新
+  CmsDocPicture_update(data:EditCmsDocPicture!,where:WhereCmsDocPicture!):ResEditCmsDocPicture
+
+  #下载 添加
+  CmsDocDownload_create(data:AddCmsDocDownload):CmsDocDownload
+  #下载 删除
+  CmsDocDownload_destroy(where:WhereCmsDocDownload!):ResDelCmsDocDownload
+  #下载 更新
+  CmsDocDownload_update(data:EditCmsDocDownload!,where:WhereCmsDocDownload!):ResEditCmsDocDownload
+
+  #系统导航 添加
+  SysNavigation_create(data:AddSysNavigation):SysNavigation
+  #系统导航 删除
+  SysNavigation_destroy(where:WhereSysNavigation!):ResDelSysNavigation
+  #系统导航 更新
+  SysNavigation_update(data:EditSysNavigation!,where:WhereSysNavigation!):ResEditSysNavigation
+
+  #会员管理 添加
+  McMember_create(data:AddMcMember):McMember
+  #会员管理 删除
+  McMember_destroy(where:WhereMcMember!):ResDelMcMember
+  #会员管理 更新
+  McMember_update(data:EditMcMember!,where:WhereMcMember!):ResEditMcMember
+
+  #cms评论 添加
+  CmsComments_create(data:AddCmsComments):CmsComments
+  #cms评论 删除
+  CmsComments_destroy(where:WhereCmsComments!):ResDelCmsComments
+  #cms评论 更新
+  CmsComments_update(data:EditCmsComments!,where:WhereCmsComments!):ResEditCmsComments
+
+  #cms评论回复 添加
+  CmsCommentsReply_create(data:AddCmsCommentsReply):CmsCommentsReply
+  #cms评论回复 删除
+  CmsCommentsReply_destroy(where:WhereCmsCommentsReply!):ResDelCmsCommentsReply
+  #cms评论回复 更新
+  CmsCommentsReply_update(data:EditCmsCommentsReply!,where:WhereCmsCommentsReply!):ResEditCmsCommentsReply
+
+  #cms模板管理 添加
+  CmsTemplate_create(data:AddCmsTemplate):CmsTemplate
+  #cms模板管理 删除
+  CmsTemplate_destroy(where:WhereCmsTemplate!):ResDelCmsTemplate
+  #cms模板管理 更新
+  CmsTemplate_update(data:EditCmsTemplate!,where:WhereCmsTemplate!):ResEditCmsTemplate
+
+  #模板文件 添加
+  CmsTemplateList_create(data:AddCmsTemplateList):CmsTemplateList
+  #模板文件 删除
+  CmsTemplateList_destroy(where:WhereCmsTemplateList!):ResDelCmsTemplateList
+  #模板文件 更新
+  CmsTemplateList_update(data:EditCmsTemplateList!,where:WhereCmsTemplateList!):ResEditCmsTemplateList
+
+  #应用表 添加
+  SysApplication_create(data:AddSysApplication):SysApplication
+  #应用表 删除
+  SysApplication_destroy(where:WhereSysApplication!):ResDelSysApplication
+  #应用表 更新
+  SysApplication_update(data:EditSysApplication!,where:WhereSysApplication!):ResEditSysApplication
+
+  #系统配置 添加
+  SysConfig_create(data:AddSysConfig):SysConfig
+  #系统配置 删除
+  SysConfig_destroy(where:WhereSysConfig!):ResDelSysConfig
+  #系统配置 更新
+  SysConfig_update(data:EditSysConfig!,where:WhereSysConfig!):ResEditSysConfig
+
+}
