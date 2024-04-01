@@ -9,9 +9,12 @@ WORKDIR /cms
 #把当前目录的文件拷贝到data下面
 COPY ./ /cms
 
-RUN yarn install
+
+RUN npm  install
 #暴露端口
 EXPOSE 7001
 #启动项目
-CMD [ "yarn", "run","dev"]
+
+CMD [ "npm", "run","dev"]
+
 

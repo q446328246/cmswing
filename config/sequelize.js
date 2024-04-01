@@ -1,14 +1,18 @@
 'use strict';
 const { Op } = require('sequelize');
+console.log(process.env.MYSQL_HOST);
+console.log(process.env.MYSQL_DATABASE);
+console.log(process.env.MYSQL_USER);
+console.log(process.env.MYSQL_PASSWORD);
 module.exports = {
   datasources: [
     {
       dialect: 'mysql',
-      host: '127.0.0.1',
+      host: process.env.MYSQL_HOST,
       port: 3306,
-      database: 'docker_node',
-      username: 'root',
-      password: 'Ww3907569.',
+      database: process.env.MYSQL_DATABASE,
+      username: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD,
       timezone: '+08:00',
       define: {
         freezeTableName: true, // 强制表名称等于模型名称
