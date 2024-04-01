@@ -1,19 +1,45 @@
+version: '3.0'
 services:
-  app:
-    entrypoint:
-    - sleep
-    - infinity
-    image: docker/dev-environments-javascript:stable-1
-    init: true
-    ports:
-      - "7001:7001"
-    networks:
-      - mynet
-    volumes:
-    - type: bind
-      source: /var/run/docker.sock
-      target: /var/run/docker.sock
 
-networks:
-  mynet:
+  mysql:
+    image: mysql  #mysql服务
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+        - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "docker_node"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "Ww3907569."
+    networks:
+      - docker-node
+  redis:
+    image: redis:6-alpine
+    ports:
+        - "6379:6379"
+    restart: always
+    environment:
+      REDIS_PORT: 6379
+    networks:  #定义服务的桥 用来服务连接
+      - docker-node
+  node-web:  #node 服务
+    build: ./
+    environment: #用到的env
+     - NODE_ENV=development 
+     - MYSQL_HOST=mysql 
+     - MYSQL_PASSWORD=Ww3907569. 
+     - MYSQL_USER=wqt 
+     - MYSQL_DATABASE=docker_node
+     - REDIS_HOST=redis
+     - REDIS_PORT=6379 
+    ports:
+      - "3000:3000"
+    depends_on: #web服务依靠mysql 要先等mysql启动
+      - mysql
+    networks:
+      - docker-node
+
+networks: #定义服务的桥 用来服务连接
+  docker-node:
     driver: bridge
