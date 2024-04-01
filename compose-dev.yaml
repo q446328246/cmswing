@@ -13,14 +13,6 @@ services:
     - type: bind
       source: /var/run/docker.sock
       target: /var/run/docker.sock
-  db:
-    image: mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=Ww3907569.
-    ports:
-      - "33061:3306"
-    networks:
-      - mynet
 
 networks:
   mynet:
