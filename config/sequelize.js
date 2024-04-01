@@ -4,9 +4,9 @@ module.exports = {
   datasources: [
     {
       dialect: 'mysql',
-      host: '172.0.0.2',
+      host: '127.0.0.1',
       port: 3306,
-      database: 'cmswing2',
+      database: 'docker_node',
       username: 'root',
       password: 'Ww3907569.',
       timezone: '+08:00',
