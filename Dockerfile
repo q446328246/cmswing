@@ -14,6 +14,6 @@ COPY . /home/cmswing
 RUN npm install
 
 #暴露给主机的端口号
-EXPOSE 7000
+EXPOSE 7001
 #执行npm start命令，启动Node工程
 CMD npm run dev

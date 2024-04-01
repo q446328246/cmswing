@@ -6,7 +6,7 @@ services:
     image: docker/dev-environments-javascript:stable-1
     init: true
     ports:
-      - "7000:7000"
+      - "7001:7001"
     networks:
       - mynet
     volumes:

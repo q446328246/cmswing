@@ -4,11 +4,11 @@ module.exports = {
   datasources: [
     {
       dialect: 'mysql',
-      host: '127.0.0.1',
+      host: '172.0.0.2',
       port: 3306,
       database: 'cmswing2',
       username: 'root',
-      password: 'root123456',
+      password: 'Ww3907569.',
       timezone: '+08:00',
       define: {
         freezeTableName: true, // 强制表名称等于模型名称
