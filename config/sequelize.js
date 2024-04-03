@@ -10,11 +10,11 @@ module.exports = {
   datasources: [
     {
       dialect: 'mysql',
-      host: '172.18.0.3',
+      host: process.env.MYSQL_HOST,
       port: 3306,
-      database: 'cms',
-      username: 'root',
-      password: 'Ww3907569.',
+      database: process.env.MYSQL_DATABASE,
+      username: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD,
       timezone: '+08:00',
       define: {
         freezeTableName: true, // 强制表名称等于模型名称

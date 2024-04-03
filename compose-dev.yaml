@@ -1,53 +1,17 @@
 version: '3.0'
 services:
-
-  mysql:
-    image: mysql  #mysql服务
-    command: --default-authentication-plugin=mysql_native_password
-    ports:
-        - "33061:3306"
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: "Ww3907569."
-      MYSQL_DATABASE: "cms"
-      MYSQL_USER: "wqt"
-      MYSQL_PASSWORD: "Ww3907569."
-    networks:
-      cms_network:
-        ipv4_address: 172.18.0.3
-
-  redis:
-    image: redis:6-alpine
-    ports:
-        - "6379:6379"
-    restart: always
-    environment:
-      REDIS_PORT: 6379
-    networks:
-      cms_network:
-        ipv4_address: 172.18.0.4
-
   cmsnode:  #node 服务
     build: ./
     environment: #用到的env
-     - NODE_ENV=development 
-     - MYSQL_HOST=172.18.0.3
+     - MYSQL_HOST=172.18.0.2
      - MYSQL_PASSWORD=Ww3907569. 
-     - MYSQL_USER=wqt  
+     - MYSQL_USER=cms  
      - MYSQL_DATABASE=cms
-     - REDIS_HOST=172.18.0.4
-     - REDIS_PORT=6379 
     ports:
       - "7001:7001"
-    depends_on: #web服务依靠mysql 要先等mysql启动
-      - mysql
     networks:
-      cms_network:
-        ipv4_address: 172.18.0.5
+      bridge:
 
 networks: #定义服务的桥 用来服务连接
-  cms_network:
+  bridge:
     driver: bridge
-    ipam:
-      config:
-        - subnet: 172.18.0.0/16
