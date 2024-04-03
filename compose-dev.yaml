@@ -14,7 +14,7 @@ services:
       MYSQL_PASSWORD: "Ww3907569."
     networks:
       cms_network:
-        ipv4_address: 172.17.0.3
+        ipv4_address: 172.17.0.2
 
   redis:
     image: redis:6-alpine
@@ -25,17 +25,17 @@ services:
       REDIS_PORT: 6379
     networks:
       cms_network:
-        ipv4_address: 172.17.0.4
+        ipv4_address: 172.17.0.3
 
   cmsnode:  #node 服务
     build: ./
     environment: #用到的env
      - NODE_ENV=development 
-     - MYSQL_HOST=172.17.0.3
+     - MYSQL_HOST=172.17.0.2
      - MYSQL_PASSWORD=Ww3907569. 
      - MYSQL_USER=wqt  
      - MYSQL_DATABASE=cms
-     - REDIS_HOST=172.17.0.4
+     - REDIS_HOST=172.17.0.3
      - REDIS_PORT=6379 
     ports:
       - "7001:7001"
@@ -43,7 +43,7 @@ services:
       - mysql
     networks:
       cms_network:
-        ipv4_address: 172.17.0.3
+        ipv4_address: 172.17.0.4
 
 networks: #定义服务的桥 用来服务连接
   cms_network:
