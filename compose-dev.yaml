@@ -3,9 +3,9 @@ services:
   cmsnode:  #node 服务
     build: ./
     environment: #用到的env
-     - MYSQL_HOST=172.18.0.2
-     - MYSQL_PASSWORD=Ww3907569. 
-     - MYSQL_USER=cms  
+     - MYSQL_HOST=192.168.10.35
+     - MYSQL_PASSWORD=w3907569
+     - MYSQL_USER=root  
      - MYSQL_DATABASE=cms
     ports:
       - "7001:7001"
